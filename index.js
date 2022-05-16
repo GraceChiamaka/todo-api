@@ -1,6 +1,8 @@
 const express = require("express");
 const userRoutes = require("./src/routes/users");
 const authRoutes = require("./src/routes/auth");
+const tasksRoutes = require("./src/routes/tasks");
+
 const dotenv = require("dotenv");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
@@ -24,6 +26,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/tasks", tasksRoutes);
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
