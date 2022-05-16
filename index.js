@@ -12,6 +12,7 @@ const port = process.env.PORT || 4001;
 const corsOptions = { credentails: true, origin: process.env.URL || "*" };
 
 // middlewares
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
