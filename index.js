@@ -1,5 +1,4 @@
 const express = require("express");
-const userRoutes = require("./src/routes/users");
 const authRoutes = require("./src/routes/auth");
 const tasksRoutes = require("./src/routes/tasks");
 
@@ -23,8 +22,6 @@ app.use(cookieParser());
 app.get("/", (req, res) => {
   res.send("Welcome to ...");
 });
-
-app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/tasks", tasksRoutes);
 
