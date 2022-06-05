@@ -21,11 +21,11 @@ CREATE TABLE tasks(
 );
 SELECT * FROM tasks;
 
-INSERT INTO tasks (user_id, title, description, completed) VALUES('a5899e02-70f9-4618-b9b2-6ec89ddd13ba', 'Go grocery shopping', 'Restock for the next 2 weeks', false);
+INSERT INTO tasks (user_id, title, description, completed) VALUES('213a8876-1f7b-4329-b5db-e6e67d571221', 'Go grocery shopping', 'Restock for the next 2 weeks', false);
 
 
 
 -- psql -U postgres
 -- \c tododb
 -- \dt
--- heroku pg:sql 
+-- heroku pg:psql 
