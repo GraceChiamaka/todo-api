@@ -11,9 +11,9 @@ const {
 const router = Router();
 
 router.get("/", authenticateToken, getTasks);
-router.get("/:id", authenticateToken, getTask);
+router.get("/:id/", authenticateToken, getTask);
 router.post("/", authenticateToken, createTask);
-router.put("/:id", authenticateToken, updateTask);
-router.delete("/:id", authenticateToken, deleteTask);
+router.put("/:id/", authenticateToken, updateTask);
+router.delete("/:id/", authenticateToken, deleteTask);
 
 module.exports = router;
