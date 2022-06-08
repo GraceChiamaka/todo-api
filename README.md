@@ -12,10 +12,10 @@ This api is a simple todo api made with Node JS for learning purposes.
 
 ### List of Endpoints
 
-- auth/register POST Signup New User
-- auth/login POST Login User
-- /tasks GET Fetch all Tasks
-- /tasks/:id GET Get Single Tasks
-- /tasks POST Create New Tasks
-- /tasks/:id UPDATE update Single Tasks
-- /tasks/:id DELETE GET Get All Tasks
+- /api/v1/auth/register POST Signup New User
+- /api/v1/auth/login POST Login User
+- /api/v1/tasks GET Fetch all Tasks
+- /api/v1/tasks/:id GET Get Single Tasks
+- /api/v1/tasks POST Create New Tasks
+- /api/v1/tasks/:id UPDATE update Single Tasks
+- /api/v1/tasks/:id DELETE GET Get All Tasks

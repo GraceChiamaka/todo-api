@@ -54,12 +54,12 @@ const signupUser = async (req, res) => {
         email,
         hashedPassword,
       ]);
-      res.status(201).send({
+      return res.status(201).send({
         message: "User created successfully!",
         user: user.rows,
       });
     } else {
-      res.send("Email already exist");
+      return res.status(400).json({ error: "Email already exist" });
     }
   } catch (error) {
     res.status(500).send({ error: error.message });
