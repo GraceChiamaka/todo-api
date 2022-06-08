@@ -45,8 +45,8 @@ const loginUser = async (req, res) => {
 const signupUser = async (req, res) => {
   const { user_name, email, password } = req.body;
   try {
-    const checkedUser = checkedUserByEmail();
-    if (checkedUser === 0) {
+    const checkedUser = await checkedUserByEmail();
+    if (checkedUser.rowCount === 0) {
       const hashedPassword = await bcrypt.hash(password, 10);
 
       const user = await pool.query(createUserQuery, [
